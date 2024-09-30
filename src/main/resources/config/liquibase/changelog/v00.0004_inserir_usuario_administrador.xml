@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="v00.0004_inserir_usuario_administrador" author="luan.alencar">
+        <insert tableName="usuario">
+            <column name="id" value="1"/>
+            <column name="nome" value="Luan Alencar"/>
+            <column name="cpf" value="72690197030"/>
+            <column name="email" value="luan.alencar@example.com"/>
+            <column name="telefone" value="1234567890"/>
+            <column name="data_nascimento" value="1990-01-01"/>
+            <column name="chave" value="admin123"/>
+            <column name="adm" value="true"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

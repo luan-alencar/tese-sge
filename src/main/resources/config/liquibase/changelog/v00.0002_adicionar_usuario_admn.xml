@@ -1,0 +1,18 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="11" author="luan.alencar">
+        <insert tableName="usuario">
+            <column name="id" value="1"/> <!-- ou pode ser deixado vazio se a sequence sq_usuario for utilizada -->
+            <column name="nome" value="Luan Alencar"/>
+            <column name="cpf" value="12345678901"/> <!-- Coloque o CPF real do admin -->
+            <column name="email" value="luan.alencar@example.com"/>
+            <column name="telefone" value="1234567890"/> <!-- Telefone opcional -->
+            <column name="data_nascimento" value="1990-01-01"/> <!-- Data de nascimento em formato ISO -->
+            <column name="chave" value="admin123"/> <!-- Chave única para o admin -->
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
