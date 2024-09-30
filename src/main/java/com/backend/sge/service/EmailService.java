@@ -16,7 +16,7 @@ public class EmailService {
 
     private final JavaMailSender javaMailSender;
 
-    public void sendMail(EmailDTO emailDTO) {
+    public void sendMail(EmailDTO emailDTO) throws jakarta.mail.MessagingException {
         try {
             MimeMessage mimeMessage = javaMailSender.createMimeMessage();
             MimeMessageHelper message = new MimeMessageHelper(mimeMessage, false, "UTF-8");
