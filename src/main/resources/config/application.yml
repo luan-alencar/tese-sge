@@ -1,18 +1,12 @@
 application:
   appName: sge
   mail:
-    endereco-remetente: luanalencar134@gmail.com
-    nome-remetente: Luan Alencar
+    endereco-remetente: sgemessaging@gmail.com
+    nome-remetente: SGE
 
 spring:
   application:
     name: sgeservice
-
-  cloud:
-    stream:
-      bindings:
-        mailer:
-          destination: mailer
 
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
@@ -42,8 +36,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: # TODO
-    password: # TODO
+    username: sgemessaging@gmail.com
+    password: sge123123
     properties:
       mail:
         smtp:
@@ -52,5 +46,15 @@ spring:
             enable: true
             required: true
           quitwait: false
+
+  rabbitmq:
+    username: mqadmin
+    password: Admin123
+
+  cloud:
+    stream:
+      bindings:
+        mailer:
+          destination: mailer
   server:
     port: 8080

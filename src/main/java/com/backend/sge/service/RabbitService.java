@@ -1,6 +1,8 @@
 package com.backend.sge.service;
 
+
 import com.backend.sge.domain.dto.EmailDTO;
+import com.backend.sge.service.sink.SgeSink;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
@@ -18,6 +20,4 @@ public class RabbitService {
     public void sendMail(@Payload EmailDTO emailDTO) {
         emailServico.sendMail(emailDTO);
     }
-
-
 }
